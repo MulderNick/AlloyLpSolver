@@ -1,4 +1,4 @@
-# vuetest
+# Alloy Lp Solver
 
 ## Project setup
 ```
