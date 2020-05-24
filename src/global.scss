@@ -1,0 +1,97 @@
+//vuetify: fix to make div flex that has has not assigned data class
+.v-window__container {
+  display: flex;
+  flex: 1;
+}
+
+.v-input--is-readonly {
+  cursor: default;
+  *{
+    cursor: default !important;
+  }
+}
+
+//vuetify: fix to make div flex that has has not assigned data class
+.v-toolbar__content{
+  display: flex;
+  flex: 1;
+}
+
+//vuetify: fix to remove standard vertical scroll bar
+html, body {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.v-chip {
+  margin: 3px;
+}
+
+.full-flex-column {
+  @extend .full-flex;
+  flex-direction: column;
+}
+
+.full-flex-row {
+  @extend .full-flex;
+  flex-direction: row;
+}
+
+.full-flex {
+  @extend .flex;
+  height: 100%;
+  max-height: 100%;
+}
+
+.flex-column {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  @extend .flex;
+  flex-direction: row;
+}
+
+.shadowed {
+  box-shadow: 0 10px 15px -11px rgba(0, 0, 0, 0.31);
+}
+
+.flex {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.d-scrollable {
+  max-height: 100%;
+  height: inherit;
+  overflow-x: auto;
+}
+
+* {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: #F0F0F0;
+
+    &:horizontal {
+      height: 5px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--v-primary-base);
+    &:hover {
+      background: var(--v-primary-base);
+    }
+  }
+}
+
+.icon-button {
+  padding: 0 !important;
+  min-width: 36px !important;
+}
+
+.v-btn {
+  margin: 5px;
+}

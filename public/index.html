@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+    <style>#outdated{font-family:sans-serif;display:none;position:fixed;top:0;left:0;width:100%;height:170px;text-align:center;text-transform:uppercase;z-index:1000;background-color: #5f497a;color:#fff}  * html #outdated{position:absolute}  #outdated h6{font-size:25px;line-height:25px;margin:30px 0 10px}  #outdated p{font-size:12px;line-height:12px;margin:0}  #outdated #btnUpdateBrowser{display:block;position:relative;padding:10px 20px;margin:30px auto 0;width:230px;color:#fff;text-decoration:none;border:2px solid #fff;cursor:pointer}  #outdated #btnUpdateBrowser:hover{color:#f25648;background-color:#fff}  #outdated .last{position:absolute;top:10px;right:25px;width:20px;height:20px}  #outdated #btnCloseUpdateBrowser{display:block;position:relative;width:100%;height:100%;text-decoration:none;color:#fff;font-size:36px;line-height:36px}</style>
+    <title>Docunite</title>
+  </head>
+  <body style="width: 100%; height: 100%; margin: 0; padding: 0;">
+
+  <!-- APPLICATION   -->
+    <noscript>
+      <strong>We're sorry but this application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+  <!-- CHECK FOR OUTDATED BROWSER   -->
+    <div id="outdated">
+      <h6>Your browser is out of date!</h6>
+      <p>Update your browser to be able to use this application</p> <a id="btnUpdateBrowser" href="https://support.docunite.com/hc/de/articles/360007509712-Warum-sehe-ich-nur-einen-grauen-Hintergrund-wenn-ich-die-Anwendung-starte">Click here for more help!</a></p>
+      <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+    </div>
+    <script src="fileBrowserCheck.js"></script>
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      //call plugin function after DOM ready
+      addLoadEvent(function(){
+        outdatedBrowser({
+          bgColor: '#5f497a',
+          color: '#ffffff',
+          lowerThan: 'Edge',
+          languagePath: ''
+        })
+      });
+    </script>
+  </body>
+</html>
