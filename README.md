@@ -1,5 +1,7 @@
 # Alloy Lp Solver
 
+Alloy Lp Solver helps to find the cheapest possible combination for creating alloys out of available scrap and metals based on Linear Programming. The project has been build as an MVP for an acquaintance. 
+
 ## Project setup
 ```
 npm install
